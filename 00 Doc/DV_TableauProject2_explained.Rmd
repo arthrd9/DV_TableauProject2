@@ -1,0 +1,9 @@
+---
+title: "CS 329E Data Visualization - Tableau Project 2"
+author: "Madeline Packard, Arthur DeVitalis"
+date: "April 13, 2015"
+output: html_document
+---
+
+In this document, we will be examinining relationships of ______ . We will demonstrate how to create four different types of crosstabs in RStudio and Tableau.
+
