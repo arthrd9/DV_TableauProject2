@@ -5,5 +5,5 @@ date: "April 13, 2015"
 output: html_document
 ---
 
-In this document, we will be examinining relationships of ______ . We will demonstrate how to create four different types of crosstabs in RStudio and Tableau.
+The dataset we are examining for our second projected in Tableau
 
