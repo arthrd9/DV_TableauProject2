@@ -1,11 +1,11 @@
 toys_df <- data.frame(fromJSON(getURL(URLencode(gsub("\n", " ", '129.152.144.84:5001/rest/native/?query= "select * from GENDER_TOYS "')),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_map4542', PASS='orcl_map4542', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE)))
 
 
-#PSAI Rank : Partitioned by gender with PSAI_Total ascending
+#MASCULINE RANK : Partitioned by gender with PSAI_Total descending
 PSAIrank_df <- data.frame(fromJSON(getURL(URLencode(gsub("\n", " ", '129.152.144.84:5001/rest/native/?query= "select AGE, GENDER, PSAI_TOTAL, rank() 
-OVER (PARTITION BY GENDER order by PSAI_TOTAL asc) as MASCULINE_BEHAVIOR_RANK from GENDER_TOYS "')),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_map4542', PASS='orcl_map4542', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE)))
+OVER (PARTITION BY GENDER order by PSAI_TOTAL desc) as MASCULINE_BEHAVIOR_RANK from GENDER_TOYS "')),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_map4542', PASS='orcl_map4542', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE)))
 
-#PSAI Rank table 2: Partitioned by AGE and only in cases where gender is female - ordered by PSAI_total ascending in each AGE
+#MASCULINE RANK 2: Partitioned by AGE and only in cases where gender is female - ordered by PSAI_total ascending and partitioned by each AGE
 PSAIrank2_df <- data.frame(fromJSON(getURL(URLencode(gsub("\n", " ", '129.152.144.84:5001/rest/native/?query= "select AGE, GENDER, PSAI_TOTAL, rank() 
 OVER (PARTITION BY AGE order by PSAI_TOTAL asc) as MASCULINE_BEHAVIOR_RANK from GENDER_TOYS where GENDER = 2"')),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_map4542', PASS='orcl_map4542', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE)))
 
