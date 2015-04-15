@@ -60,23 +60,11 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 
 <p>This data was obtained by research conducted by the Brain and Gender Laboratory at Texas A&amp;M University, under Gerianne Alexander, Ph.D.</p>
-<p>In this research, participants agreed to complete a Pre-School Activities Iventory (PSAI). The PSAI is a psychometric scale used to assess gender role behavior in young children. A high total score on the PSAI indicates preference for male-typical toys (ie. trucks or guns), while a low total score indicates a preference for female-typical toys (ie. dolls or baking pans). Participants were also asked to complete the Bem Sex Role Iventory (BSRI) - a measure of masculinity-femininity and gender roles and how people identify themselves.</p>
-<pre><code>## 
-## &gt; toys_df &lt;- data.frame(fromJSON(getURL(URLencode(gsub(&quot;\n&quot;, 
-## +     &quot; &quot;, &quot;129.152.144.84:5001/rest/native/?query= \&quot;select * from GENDER_TOYS \&quot;&quot;)), 
-##  .... [TRUNCATED] 
-## 
-## &gt; PSAIrank_df &lt;- data.frame(fromJSON(getURL(URLencode(gsub(&quot;\n&quot;, 
-## +     &quot; &quot;, &quot;129.152.144.84:5001/rest/native/?query= \&quot;select AGE, GENDER, PSAI_TOTAL .... [TRUNCATED] 
-## 
-## &gt; head(PSAIrank_df)
-##   AGE GENDER PSAI_TOTAL PSAI_RANK
-## 1  25      1      19.65         1
-## 2  30      1      21.85         2
-## 3  18      1      35.05         3
-## 4  38      1      35.05         3
-## 5  51      1      35.05         3
-## 6  27      1      37.25         6</code></pre>
+<p>In this research, participants agreed to complete a Pre-School Activities Iventory (PSAI). The PSAI is a psychometric scale used to assess gender role behavior in young children, and consists of 24 items that measure how frequently the participant played with certain toys (e.g., guns), engaged in specific activities (e.g., “playing house”), and displayed various characteristics (e.g., “enjoys rough and tumble play”) when the participant was a pre-school-aged child. While typically used by parents to assess and describe the behavior of young children, the participants in this study were instructed to recall their preferences at a young age. Participants indicated how often they engaged in different types of play using a 5-point Likert scale ranging from 1 “never” to 5 “very often.”</p>
+<p>Participants were also asked to complete the Bem Sex Role Iventory (BSRI) - a measure of masculinity-femininity and gender roles and how people identify themselves.</p>
+<p><strong>The Dataframe</strong></p>
+<pre class="r"><code>source(&quot;../01 SQL Crosstabs/Crosstabs_Project2.R&quot;, echo = FALSE)</code></pre>
+<pre class="r"><code>head(toys_df)</code></pre>
 <pre><code>##   AGE GENDER LATITUDE LONGITUDE PSAI_M PSAI_F PSAI_TOTAL MTOY FTOY
 ## 1  32      1 27.70200  -97.3424     36     18      68.05 2.50 1.00
 ## 2  34      1 30.45641  -97.6938     42     22      70.25 3.00 2.33
@@ -91,6 +79,9 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 ## 4     6.00    4.25
 ## 5     6.25    3.85
 ## 6     3.37    4.15</code></pre>
+<p>A high total score on the PSAI (PSAI_Total) indicates more masculine behavior and a lower total score indicates more feminine behavior.</p>
+<p>The BEM variables (BEM masc, BEM fem) are additional measures for indentifying masculine and feminine traits.</p>
+<p>The “MTOY” and “FTOY” variables refer to masculine toy preference and female toy preference, with a scale of 1 to 5.</p>
 
 
 </div>
