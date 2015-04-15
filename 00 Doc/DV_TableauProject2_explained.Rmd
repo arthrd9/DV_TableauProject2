@@ -1,7 +1,7 @@
 ---
 title: "CS 329E Data Visualization - Tableau Project 2"
 author: "Madeline Packard, Arthur DeVitalis"
-date: "April 13, 2015"
+date: "April 15, 2015"
 output: html_document
 ---
 
@@ -37,7 +37,6 @@ This dataframe also includes variables Latitude and Longitude, indicating the ge
 
 **Rank**
 
-
 The first contigency table we created ranks by highest PSAI_Total score.
 
 ```{r, message=FALSE, echo = TRUE}
@@ -60,12 +59,15 @@ tbl_df(PSAInthval_df)
 
 **Max Value/ Last Value/ Difference**
 
-We still need to make this table!
+In this table, we observed the difference in value of PSAI_Total score of each age and gender.
+
+```{r, message=FALSE, echo = TRUE}
+tbl_df(PSAIdiff_df)
+```
 
 **Cumulative Distribution**
 
 Finally, we considered looking at the cumulative distribution of the PSAI_Total scores, partitioned by age and ordered by gender.
-
 
 ```{r, message=FALSE, echo = TRUE}
 tbl_df(PSAIcume_dist_df)
