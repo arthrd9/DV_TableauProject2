@@ -82,6 +82,17 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <p>A high total score on the PSAI (PSAI_Total) indicates more masculine behavior and a lower total score indicates more feminine behavior.</p>
 <p>The BEM variables (BEM masc, BEM fem) are additional measures for indentifying masculine and feminine traits.</p>
 <p>The “MTOY” and “FTOY” variables refer to masculine toy preference and female toy preference, with a scale of 1 to 5.</p>
+<p>This dataframe also includes variables Latitude and Longitude, indicating the geographic location where the participants took the online study.</p>
+<p><strong>Crosstabs</strong></p>
+<p>The first contigency table we created ranks the total PSAI scores by ascending order, partitioned by gender.</p>
+<pre class="r"><code>head(PSAIrank_df)</code></pre>
+<pre><code>##   AGE GENDER PSAI_TOTAL PSAI_RANK
+## 1  25      1      19.65         1
+## 2  30      1      21.85         2
+## 3  18      1      35.05         3
+## 4  38      1      35.05         3
+## 5  51      1      35.05         3
+## 6  27      1      37.25         6</code></pre>
 
 
 </div>

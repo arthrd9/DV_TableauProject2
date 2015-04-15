@@ -30,3 +30,11 @@ The BEM variables (BEM masc, BEM fem) are additional measures for indentifying m
 The "MTOY" and "FTOY" variables refer to masculine toy preference and female toy preference, with a scale of 1 to 5.
 
 This dataframe also includes variables Latitude and Longitude, indicating the geographic location where the participants took the online study.
+
+**Crosstabs**
+
+The first contigency table we created ranks the total PSAI scores by ascending order, partitioned by gender.
+
+```{r, message=FALSE, echo = TRUE}
+head(PSAIrank_df)
+```
