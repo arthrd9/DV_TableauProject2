@@ -11,7 +11,7 @@ In this research, participants agreed to complete a Pre-School Activities Ivento
 
 Participants were also asked to complete the Bem Sex Role Iventory (BSRI) - a measure of masculinity-femininity and gender roles and how people identify themselves. 
 
-**The Dataframe**
+## The Data
 ```{r, include=FALSE, results = "hide"}
 source("../01 SQL Crosstabs/packages.R", echo = FALSE)
 ```
@@ -33,7 +33,10 @@ For gender, 1 = Male; 2 = Female.
 
 This dataframe also includes variables Latitude and Longitude, indicating the geographic location where the participants took the online study.
 
-**Crosstabs**
+## Crosstabs
+
+**Rank**
+
 
 The first contigency table we created ranks by highest PSAI_Total score.
 
@@ -45,4 +48,25 @@ We created a second table where we selected occurances where gender was female, 
 
 ```{r, message=FALSE, echo = TRUE}
 tbl_df(PSAIrank2_df)
+```
+
+**Nth Value**
+
+We were interested in observing the maximum PSAI_Total score for each age when partitioned by gender.
+
+```{r, message=FALSE, echo = TRUE}
+tbl_df(PSAInthval_df)
+```
+
+**Max Value/ Last Value/ Difference**
+
+We still need to make this table!
+
+**Cumulative Distribution**
+
+Finally, we considered looking at the cumulative distribution of the PSAI_Total scores, partitioned by age and ordered by gender.
+
+
+```{r, message=FALSE, echo = TRUE}
+tbl_df(PSAIcume_dist_df)
 ```
