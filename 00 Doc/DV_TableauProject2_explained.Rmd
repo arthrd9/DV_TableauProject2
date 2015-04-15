@@ -10,6 +10,12 @@ This data was obtained by research conducted by the Brain and Gender Laboratory 
 In this research, participants agreed to complete a Pre-School Activities Iventory (PSAI). The PSAI is a psychometric scale used to assess gender role behavior in young children. A high total score on the PSAI indicates preference for male-typical toys (ie. trucks or guns), while a low total score indicates a preference for female-typical toys (ie. dolls or baking pans). Participants were also asked to complete the Bem Sex Role Iventory (BSRI) - a measure of masculinity-femininity and gender roles and how people identify themselves.
 
 
+
+The Preschool Activities Inventory (PSAI; Golombok & Rust, 1993) consists of 24 items that measure how frequently the participant played with certain toys (e.g., guns), engaged in specific activities (e.g., "playing house"), and displayed various characteristics (e.g., "enjoys rough and tumble play") when the participant was a pre-school-aged child.  Although this questionnaire is typically given to parents to describe the behavior of their young children, participants in this study were instructed to recall how they played at a young age.  The PSAI has been used in this manner in previous research (Alexander, 2006; Hines et al., 2004), and the sex difference in recalled childhood play behavior is robust (d=2.65-3.25).  Participants indicated how often they engaged in different types of play using a 5-point Likert scale ranging from 1 "never" to 5 "very often."  Higher scores indicate more masculine behavior and lower scores indicate more feminine behavior.
+
+The mtoy and ftoy refer to masculine toy preference and feminine toy preferences.  Higher is more of each.
+
+
 ```{r, include=FALSE, results = "hide"}
 source("../01 SQL Crosstabs/packages.R", echo = FALSE)
 ```
