@@ -25,7 +25,7 @@ FROM GENDER_TOYS"')),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL
 
 #cume_dist
 PSAIcume_dist_df <- data.frame(fromJSON(getURL(URLencode(gsub("\n", " ", '129.152.144.84:5001/rest/native/?query= "select AGE, GENDER, PSAI_Total, cume_dist() 
-OVER (PARTITION BY AGE order by PSAI_Total) as cume_dist
+OVER (PARTITION BY AGE, GENDER order by PSAI_Total) as cume_dist
 from GENDER_TOYS"
 ')),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_map4542', PASS='orcl_map4542', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE)))
 

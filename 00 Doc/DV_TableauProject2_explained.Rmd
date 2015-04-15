@@ -49,6 +49,8 @@ We created a second table where we selected occurances where gender was female, 
 tbl_df(PSAIrank2_df)
 ```
 
+In this second table, the lowest PSAI_Total score for an eighteen year old female was 11.95, indicated less masculine behaviors,  while the highest was 51.55.
+
 **Nth Value**
 
 We were interested in observing the maximum PSAI_Total score for each age when partitioned by gender.
@@ -56,6 +58,8 @@ We were interested in observing the maximum PSAI_Total score for each age when p
 ```{r, message=FALSE, echo = TRUE}
 tbl_df(PSAInthval_df)
 ```
+
+From this, we can observe that the maximum PSAI_Total score for men at age 18 is significantly higher than the maxiumum score for women at age 18.
 
 **Max Value/ Last Value/ Difference**
 
@@ -65,10 +69,14 @@ In this table, we observed the difference in value of PSAI_Total score of each a
 tbl_df(PSAIdiff_df)
 ```
 
+Obviously, we still need to code this part!
+
 **Cumulative Distribution**
 
-Finally, we considered looking at the cumulative distribution of the PSAI_Total scores, partitioned by age and ordered by gender.
+Finally, we considered looking at the cumulative distribution of the PSAI_Total scores, partitioned by age and gender.
 
 ```{r, message=FALSE, echo = TRUE}
 tbl_df(PSAIcume_dist_df)
 ```
+
+The cumulative distribution observes the PSAI_Total score and provides the probability that the score will be less than or equal to the highest value in the respective age and gender group.

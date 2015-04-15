@@ -10,7 +10,7 @@
 
 <meta name="author" content="Madeline Packard, Arthur DeVitalis" />
 
-<meta name="date" content="2015-04-13" />
+<meta name="date" content="2015-04-15" />
 
 <title>CS 329E Data Visualization - Tableau Project 2</title>
 
@@ -55,7 +55,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="header">
 <h1 class="title">CS 329E Data Visualization - Tableau Project 2</h1>
 <h4 class="author"><em>Madeline Packard, Arthur DeVitalis</em></h4>
-<h4 class="date"><em>April 13, 2015</em></h4>
+<h4 class="date"><em>April 15, 2015</em></h4>
 </div>
 
 
@@ -121,6 +121,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 ## 9   19      2      47.15                       4
 ## 10  19      2      48.25                       5
 ## .. ...    ...        ...                     ...</code></pre>
+<p>In this second table, the lowest PSAI_Total score for an eighteen year old female was 11.95, indicated less masculine behaviors, while the highest was 51.55.</p>
 <p><strong>Nth Value</strong></p>
 <p>We were interested in observing the maximum PSAI_Total score for each age when partitioned by gender.</p>
 <pre class="r"><code>tbl_df(PSAInthval_df)</code></pre>
@@ -138,25 +139,30 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 ## 9   18      2      24.05    11.95
 ## 10  18      2      48.25    11.95
 ## .. ...    ...        ...      ...</code></pre>
+<p>From this, we can observe that the maximum PSAI_Total score for men at age 18 is significantly higher than the maxiumum score for women at age 18.</p>
 <p><strong>Max Value/ Last Value/ Difference</strong></p>
-<p>We still need to make this table!</p>
+<p>In this table, we observed the difference in value of PSAI_Total score of each age and gender.</p>
+<pre class="r"><code>tbl_df(PSAIdiff_df)</code></pre>
+<pre><code>## Source: local data frame [0 x 0]</code></pre>
+<p>Obviously, we still need to code this part!</p>
 <p><strong>Cumulative Distribution</strong></p>
-<p>Finally, we considered looking at the cumulative distribution of the PSAI_Total scores, partitioned by age and ordered by gender.</p>
+<p>Finally, we considered looking at the cumulative distribution of the PSAI_Total scores, partitioned by age and gender.</p>
 <pre class="r"><code>tbl_df(PSAIcume_dist_df)</code></pre>
 <pre><code>## Source: local data frame [1,854 x 4]
 ## 
 ##    AGE GENDER PSAI_TOTAL CUME_DIST
-## 1   17      2      40.55 1.0000000
-## 2   18      1      69.15 0.5555556
-## 3   18      1      35.05 0.5555556
-## 4   18      1      54.85 0.5555556
-## 5   18      1      72.45 0.5555556
-## 6   18      1      72.45 0.5555556
-## 7   18      2      11.95 1.0000000
-## 8   18      2      51.55 1.0000000
-## 9   18      2      24.05 1.0000000
-## 10  18      2      48.25 1.0000000
+## 1   17      2      40.55      1.00
+## 2   18      1      35.05      0.20
+## 3   18      1      54.85      0.40
+## 4   18      1      69.15      0.60
+## 5   18      1      72.45      1.00
+## 6   18      1      72.45      1.00
+## 7   18      2      11.95      0.25
+## 8   18      2      24.05      0.50
+## 9   18      2      48.25      0.75
+## 10  18      2      51.55      1.00
 ## .. ...    ...        ...       ...</code></pre>
+<p>The cumulative distribution observes the PSAI_Total score and provides the probability that the score will be less than or equal to the highest value in the respective age and gender group.</p>
 </div>
 
 
