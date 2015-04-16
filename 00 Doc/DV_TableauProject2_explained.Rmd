@@ -61,7 +61,7 @@ tbl_df(PSAInthval_df)
 
 From this, we can observe that the maximum PSAI_Total score for men at age 18 is significantly higher than the maxiumum score for women at age 18.
 
-**Max Value/ Last Value/ Difference**
+**Difference**
 
 In this table, we observed the difference in value of PSAI_Total score of each age and gender.
 
@@ -69,7 +69,7 @@ In this table, we observed the difference in value of PSAI_Total score of each a
 tbl_df(PSAIdiff_df)
 ```
 
-Obviously, we still need to code this part!
+Here, we can observe the difference between each PSAI score and the maximum PSAI score by gender.
 
 **Cumulative Distribution**
 
